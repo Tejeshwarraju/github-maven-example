@@ -6,7 +6,7 @@ ENV CATALINA_BASE /var/lib/tomcat7
 RUN ln -s /usr/share/tomcat7/bin/catalina.sh /usr/local/bin/catalina.sh
 ADD example/target/*.jar /var/lib/tomcat7/webapps/
 EXPOSE 8080
-RUN catalina.sh run
+ENTRYPOINT [catalina.sh run]
 
 WORKDIR /home/teja
 
